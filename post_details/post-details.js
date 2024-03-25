@@ -16,7 +16,6 @@ fetch(postUrl).then(post => post.json()).then(post => {
     for (const postKey in post) {
         let postH4 = document.createElement('h4');
         postH4.className = 'postH4';
-        // postH4.style.fontWeight = 'normal';
         postH4.innerHTML = `${postKey}: <b>${post[postKey]}</b>;`;
         postBlock.appendChild(postH4);
     }
@@ -54,14 +53,13 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
             commentsUlElement.appendChild(commentLi);
         }
     }
-
+//
     let lastUl = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1];
-    console.log(lastUl.children.length);
+    //
     if (lastUl.children.length <= 1) {
         let commentLi = lastUl.getElementsByClassName('commentLi');
         for (const commentLiElement of commentLi) {
         commentLiElement.classList.remove('commentLi');
-            // commentLiElement.classList.add('lastLi');
         }
     }
 })

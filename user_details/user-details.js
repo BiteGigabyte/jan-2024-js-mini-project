@@ -19,7 +19,6 @@ fetch(userUrl).then(user => user.json()).then(user => {
     userUl.className = 'userUl';
     userDiv.appendChild(userUl);
     //
-    console.log(user);
     for (const userKey in user) {
         if (typeof user[userKey] !== 'object') {
         let userDetailLi = document.createElement('li');
@@ -71,7 +70,6 @@ fetch(userUrl).then(user => user.json()).then(user => {
         }, 1000);
     //
         buttonTrigger = !buttonTrigger;
-        console.log(buttonTrigger);
         if (buttonTrigger === true) {
             let postsDiv = document.createElement('div');
             postsDiv.id = 'postsDiv';
@@ -81,8 +79,6 @@ fetch(userUrl).then(user => user.json()).then(user => {
         //
         fetch(postsUrl).then(posts => posts.json()).then(posts => {
             for (const post of posts) {
-                console.log(post);
-
                 let postDiv = document.createElement('div');
                 postDiv.className = 'postDiv';
                 postsDiv.appendChild(postDiv);
@@ -93,8 +89,6 @@ fetch(userUrl).then(user => user.json()).then(user => {
                 postDetailsButton.value = 'post details';
                 postDetailsButton.type = 'button';
                 postDetailsButton.className = 'postDetailsButton';
-                // postDetailsButton.classList.toggle('colorGreen');
-                // postDetailsButton.src = `../post_details/post-details.html`;
                 postDetailsButton.onclick = function () {
                     window.location.href = `../post_details/post-details.html?postId=${post['id']}`;
                     //
