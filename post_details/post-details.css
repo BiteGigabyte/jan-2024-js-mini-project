@@ -1,0 +1,79 @@
+/*//     post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/*//     Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд)*/
+body {
+    margin: 20px 0 0;
+    background-color: skyblue;
+    padding: 0 18px;
+}
+
+#father {
+ width: 100%;
+}
+
+.postBlock {
+    font-size: 170%;
+    background-color: burlywood;
+    padding: 1px 8px;
+}
+
+.postH4 {
+    font-weight: normal;
+}
+
+
+.commentsUl {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    min-height: 25vh;
+    box-sizing: border-box;
+
+    font-size: 150%;
+
+    background-color: deepskyblue;
+
+    align-items: center;
+}
+
+li {
+    width: 100%;
+
+    border: 2px solid black;
+    border-left: 0;
+
+    padding: 7px 7px 7px 0;
+}
+
+.commentLi {
+    flex-shrink: 0;
+    width: 75%;
+    margin-right: 3.5%;
+}
+
+
+
+
+/* Ширина скролу */
+.commentsUl::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Кнопки стрілок */
+.commentsUl::-webkit-scrollbar-button {
+    background: #ccc;
+}
+
+/* Смуга скролу */
+.commentsUl::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Видима частина скролу */
+.commentsUl::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Рамка скролу */
+.commentsUl::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

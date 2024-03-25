@@ -1,0 +1,47 @@
+/*// Стилизація проєкта -*/
+/*// index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+body {
+    background-color: darkolivegreen;
+    margin: 10px 0;
+}
+
+#usersDiv {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2vh;
+    row-gap: 2vh;
+    justify-content: center;
+}
+
+.userDiv {
+    height: 20vh;
+    width: 47%;
+    background-color: sandybrown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 160%;
+}
+
+.userBlock {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    font-weight: normal;
+}
+
+.userButton {
+    width: 55%;
+    height: 30%;
+    font-size: 115%;
+
+    background-color: #cccccc;
+}
+
+.userButton:hover {
+    background-color: #888888;
+}
+
+.colorGreen {
+    background-color: green;
+}

@@ -1,0 +1,89 @@
+/*//     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
+/*//     блоки з короткою іфною про post - в ряд по 5 .*/
+/**/
+body {
+    margin: 0;
+}
+
+#father {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.userDiv {
+    width: calc(100% - 16px);
+    background-color: #f5ae7b;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+.userUl {
+    font-size: 180%;
+    overflow-wrap: break-word;
+}
+
+.userPostsButton {
+    margin-top: 15px;
+    height: 20vh;
+    width: 90%;
+    font-size: 200%;
+    background-color: cornflowerblue;
+    margin-bottom: 15px;
+}
+
+/* Стилі для кнопки з новим кольором після кліку */
+.colorGreen {
+    background-color: green;
+}
+.colorRed {
+    background-color: red;
+}
+
+
+
+
+#postsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2%;
+    row-gap: 2vw;
+    margin: 2vw 0;
+
+    font-size: 150%;
+}
+
+.postDiv {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid black;
+    padding: 5px;
+
+    background-color: olivedrab;
+
+    position: relative;
+
+    min-height: 152px;
+}
+
+.postH4 {
+    margin-bottom: 15px;
+}
+
+.postDetailsButton {
+    height: 50px;
+    width: 70%;
+    font-size: 120%;
+
+    position: absolute;
+    bottom: 10px;
+}
+
+.postDetailsButton:hover {
+    background-color: cornflowerblue;
+}

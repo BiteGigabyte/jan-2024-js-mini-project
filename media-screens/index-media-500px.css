@@ -1,0 +1,19 @@
+@media screen and (max-height: 500px) {
+    .userDiv {
+        width: 93vw;
+        flex-direction: row;
+        justify-content: center;
+        /*flex-wrap: nowrap;*/
+        column-gap: 2vh;
+        font-size: 110%;
+    }
+
+    .userBlock {
+        margin-top: 20px;
+    }
+
+    .userButton {
+        font-size: 100%;
+        width: 50%;
+    }
+}
