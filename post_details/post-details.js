@@ -24,6 +24,14 @@ fetch(postUrl).then(post => post.json()).then(post => {
 //
 let commentsUrl = new URL (`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
 //
+    function liBuilder (comment) {
+        let commentsUlElement = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1]
+        let commentLi = document.createElement('li');
+        commentLi.className = 'commentLi';
+        commentLi.innerHTML = `<i>id:</i> <b>${comment['id']}</b>; <i>body:</i> <b>${comment['body']}</b>;`;
+        commentsUlElement.appendChild(commentLi);
+    }
+//
 fetch(commentsUrl).then(comments => comments.json()).then(comments => {
     let commentsUl = document.createElement('ul');
     commentsUl.className = 'commentsUl';
@@ -34,11 +42,7 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
     for (const comment of comments) {
             ++elementsLiQuantity;
         if (elementsLiQuantity <= 4) {
-                let commentsUlElement = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1]
-                let commentLi = document.createElement('li');
-                commentLi.className = 'commentLi';
-                commentLi.innerHTML = `<i>id:</i> <b>${comment['id']}</b>; <i>body:</i> <b>${comment['body']}</b>;`;
-                commentsUlElement.appendChild(commentLi);
+            liBuilder(comment);
         } else {
             elementsLiQuantity = 1;
             //
@@ -46,11 +50,7 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
             commentsUl.className = 'commentsUl';
             fatherBlock.appendChild(commentsUl);
             //
-            let commentsUlElement = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1]
-            let commentLi = document.createElement('li');
-            commentLi.className = 'commentLi';
-            commentLi.innerHTML = `<i>id:</i> <b>${comment['id']}</b>; <i>body:</i> <b>${comment['body']}</b>;`;
-            commentsUlElement.appendChild(commentLi);
+            liBuilder(comment);
         }
     }
 //
