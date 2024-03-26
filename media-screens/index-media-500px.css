@@ -12,6 +12,7 @@
     }
 
     .userButton {
+        margin: 0; /* Поміщає кнопку в центр */
         font-size: 100%;
         width: 50%;
     }

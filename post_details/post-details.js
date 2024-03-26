@@ -28,7 +28,7 @@ let commentsUrl = new URL (`https://jsonplaceholder.typicode.com/posts/${postId}
         let commentsUlElement = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1]
         let commentLi = document.createElement('li');
         commentLi.className = 'commentLi';
-        commentLi.innerHTML = `<i>id:</i> <b>${comment['id']}</b>; <i>body:</i> <b>${comment['body']}</b>;`;
+        commentLi.innerHTML = `<div><i>id:</i> <b>${comment['id']}</b>; <i>body:</i> <b>${comment['body']}</b>;</div>`;
         commentsUlElement.appendChild(commentLi);
     }
 //
@@ -62,4 +62,29 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
         commentLiElement.classList.remove('commentLi');
         }
     }
+    //
+    //
+    // Додав цей код після того, як всі елементи будуть додані до DOM
+// після завершення виконання функції fetch для отримання коментарів щоб задати однаковий розмір
+//
+// Отримати всі елементи li
+    let listItems = document.querySelectorAll('.commentLi');
+//
+// Знайти найбільшу висоту серед усіх елементів li
+    let maxHeight = 0;
+    listItems.forEach(function(item) {
+        let itemHeight = item.offsetHeight;
+        maxHeight = Math.max(maxHeight, itemHeight);
+    });
+//
+// Застосувати максимальну висоту до всіх елементів li
+    listItems.forEach(function(item) {
+        item.style.height = maxHeight + 'px';
+    });
+//
+    //
 })
+//
+//
+//
+//

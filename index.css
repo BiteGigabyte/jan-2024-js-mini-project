@@ -14,13 +14,17 @@ body {
 }
 
 .userDiv {
-    height: 20vh;
+    min-height: 20vh;
     width: 47%;
     background-color: sandybrown;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 160%;
+
+    justify-content: center;
+    text-align: center;
+
 }
 
 .userBlock {
@@ -28,14 +32,21 @@ body {
     margin-bottom: 20px;
 
     font-weight: normal;
+
+    word-break: break-word;
 }
 
 .userButton {
+    margin-top: auto; /* Поміщає кнопку в нижній край блоку */
+    margin-bottom: 10px;
     width: 55%;
-    height: 30%;
+    min-height: 30%;
     font-size: 115%;
 
     background-color: #cccccc;
+
+    white-space: pre-wrap;
+    height: auto;
 }
 
 .userButton:hover {

@@ -26,11 +26,14 @@ body {
 
 .userPostsButton {
     margin-top: 15px;
-    height: 20vh;
+    min-height: 20vh;
     width: 90%;
     font-size: 200%;
     background-color: cornflowerblue;
     margin-bottom: 15px;
+
+    white-space: pre-wrap;
+    height: auto;
 }
 
 /* Стилі для кнопки з новим кольором після кліку */
@@ -76,14 +79,21 @@ body {
 }
 
 .postDetailsButton {
-    height: 50px;
+    min-height: 50px;
     width: 70%;
     font-size: 120%;
 
     position: absolute;
     bottom: 10px;
+
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+
+    white-space: pre-wrap;
+    height: auto;
 }
 
 .postDetailsButton:hover {
     background-color: cornflowerblue;
+    border-color: cornflowerblue;
 }

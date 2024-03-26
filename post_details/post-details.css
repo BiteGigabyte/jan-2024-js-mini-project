@@ -48,6 +48,11 @@ li {
     flex-shrink: 0;
     width: 75%;
     margin-right: 3.5%;
+
+    display: flex;
+    align-items: center;
+
+    word-break: break-word;
 }
 
 

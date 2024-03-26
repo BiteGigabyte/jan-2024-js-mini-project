@@ -3,4 +3,9 @@
         width: 95%;
     }
 
+    .postDetailsButton {
+        position: static;
+        margin-top: auto;
+    }
+
 }
