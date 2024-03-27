@@ -74,7 +74,10 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
     let maxHeight = 0;
     listItems.forEach(function(item) {
         let itemHeight = item.offsetHeight;
+        console.log(itemHeight);
         maxHeight = Math.max(maxHeight, itemHeight);
+        console.log(maxHeight);
+
     });
 //
 // Застосувати максимальну висоту до всіх елементів li

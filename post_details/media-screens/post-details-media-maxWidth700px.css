@@ -1,5 +1,5 @@
 @media screen and (max-width: 700px){
-    .commentUl {
+    .commentsUl {
         min-height: auto;
     }
 
@@ -7,4 +7,11 @@
     margin-right: 10%;
     }
 
+    b {
+        word-wrap: break-word;
+    }
+
+    li {
+        box-sizing: border-box;
+    }
 }
