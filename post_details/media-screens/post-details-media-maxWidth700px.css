@@ -7,11 +7,8 @@
     margin-right: 10%;
     }
 
-    b {
-        word-wrap: break-word;
-    }
-
     li {
-        box-sizing: border-box;
+        /*Вставив знак переносу на слова які не вміщаються*/
+        hyphens: auto;
     }
 }
