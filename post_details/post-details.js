@@ -24,7 +24,7 @@ fetch(postUrl).then(post => post.json()).then(post => {
 //
 let commentsUrl = new URL (`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
 //
-    function liBuilder (comment) {
+    function LiDetailsFunc (comment) {
         let commentsUlElement = document.getElementsByClassName('commentsUl')[document.getElementsByClassName('commentsUl').length - 1]
         let commentLi = document.createElement('li');
         commentLi.className = 'commentLi';
@@ -42,7 +42,7 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
     for (const comment of comments) {
             ++elementsLiQuantity;
         if (elementsLiQuantity <= 4) {
-            liBuilder(comment);
+            LiDetailsFunc(comment);
         } else {
             elementsLiQuantity = 1;
             //
@@ -50,7 +50,7 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
             commentsUl.className = 'commentsUl';
             fatherBlock.appendChild(commentsUl);
             //
-            liBuilder(comment);
+            LiDetailsFunc(comment);
         }
     }
 //
@@ -64,7 +64,7 @@ fetch(commentsUrl).then(comments => comments.json()).then(comments => {
     }
     //
     //
-    // Додав цей код після того, як всі елементи будуть додані до DOM
+    // Після того, як всі елементи будуть додані до DOM
 // після завершення виконання функції fetch для отримання коментарів щоб задати їх рамкам однаковий розмір
 //
 // Отримати всі елементи li
